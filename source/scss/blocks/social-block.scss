@@ -29,6 +29,7 @@
   height: 4rem;
   color: $c-dark;
   border-radius: 50%;
+  transition: all 0.25s ease-in;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
@@ -47,6 +48,7 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
+    transition: all 0.1s ease-in;
   }
 
   svg {
