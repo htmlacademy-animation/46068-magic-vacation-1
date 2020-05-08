@@ -250,7 +250,7 @@
       height: 2px;
       background-color: $c-light;
       left: 0;
-      transition: width 0.3s ease-in;
+      transition: width 0.25s ease-in;
 
       @media (max-width: $tablet) and (orientation: portrait) {
         left: 0;
