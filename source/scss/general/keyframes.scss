@@ -1,0 +1,34 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(25px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes growFormField {
+  0% {
+    flex-grow: 0;
+    width: 0;
+  }
+
+  100% {
+    flex-grow: 1;
+  }
+}

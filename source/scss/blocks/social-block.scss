@@ -3,8 +3,20 @@
 
   &:hover {
     .social-block__list {
-      opacity: 1;
       pointer-events: auto;
+    }
+
+    .social-block__link {
+      opacity: 1;
+      transition: opacity 0.35s ease-in;
+
+      &--insta {
+        transition-delay: 0.1s;
+      }
+
+      &--vk {
+        transition-delay: 0.2s;
+      }
     }
   }
 }
@@ -17,6 +29,7 @@
   height: 4rem;
   color: $c-dark;
   border-radius: 50%;
+  transition: all 0.35s ease-in;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
@@ -35,6 +48,7 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
+    transition: all 0.15s ease-in; // Ставлю 0.15s, а не 0.35s как в критериях, тк в видео анимация происходит быстрее, чем указанный вариант в критериях
   }
 
   svg {
@@ -87,7 +101,6 @@
   top: 100%;
   right: 0;
   margin-top: 1.5rem;
-  opacity: 0;
   pointer-events: none;
 
   @media (min-width: $stop-scaling) {
@@ -168,6 +181,7 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
+  opacity: 0;
 
   @media (min-width: $stop-scaling) {
     width: 40px;

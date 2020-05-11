@@ -4,7 +4,7 @@ var gulp = require("gulp");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
-var svgstore = require("gulp-svgstore")
+var svgstore = require("gulp-svgstore");
 
 gulp.task("images", function() {
   return gulp.src("source/img/**/*.{png,jpg,svg}")

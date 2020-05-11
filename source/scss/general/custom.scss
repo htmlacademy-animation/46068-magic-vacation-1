@@ -1,0 +1,10 @@
+/* External styling override */
+
+.swiper-slide-active .slider__item-text,
+.swiper-slide-next .slider__item-text {
+  animation: fadeInLeft 0.65s ease 0s backwards;
+}
+
+.swiper-slide-next .slider__item-text {
+  animation-delay: 0.35s;
+}
