@@ -272,8 +272,14 @@
 
     &.active {
       &::after {
-        display: block;
+        left: 0;
+        right: auto;
         width: 100%;
+        /* TODO Реализация не работает.
+            Идея заключалась в том, чтобы задержать отрисовку линии, пока не доработает анимация появляние навигации.
+            Записала себе в вопросы на консультацию
+         */
+        transition-delay: 0.65s;
       }
     }
 
@@ -319,3 +325,28 @@
 .page--loaded .page-header__nav {
   opacity: 1;
 }
+
+/*TODO альтернативная неработающая попытка реализовать подчеркивание при загрузке страницы */
+/*.page--loaded .page-header__menu a {
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: $c-light;
+    transition: width 0.35s ease-in;
+  }
+}
+
+.page--loaded .page-header__menu a {
+  &.active {
+    &::after {
+      left: 0;
+      right: auto;
+      width: 100%;
+      transition-delay: 0.65s;
+    }
+  }
+}*/
