@@ -50,6 +50,11 @@
   transform: translateY(40px);
   transition: all 0.65s cubic-bezier(0.5, 0.85, 0.5, 0.85);
 
+  .page--loaded & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   @media (max-width: $tablet) and (orientation: portrait) {
     width: 3.5rem;
     height: 3.5rem;
@@ -356,9 +361,4 @@
 
 .screen--rules {
   background-color: $c-dark;
-}
-
-.page--loaded .screen__footer {
-  opacity: 1;
-  transform: translateY(0);
 }
