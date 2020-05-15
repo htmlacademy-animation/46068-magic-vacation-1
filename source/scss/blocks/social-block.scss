@@ -11,11 +11,11 @@
       transition: opacity 0.35s ease-in;
 
       &--insta {
-        transition-delay: 0.1s;
+        transition-delay: delay(0.1s, 1);
       }
 
       &--vk {
-        transition-delay: 0.2s;
+        transition-delay: delay(0.1s, 2);
       }
     }
   }
@@ -39,16 +39,18 @@
     display: none;
   }
 
-  &::before {
-    @include center;
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: $c-light;
-    border: 2px solid $c-light;
-    z-index: -1;
-    transition: all 0.15s ease-in; // Ставлю 0.15s, а не 0.35s как в критериях, тк в видео анимация происходит быстрее, чем указанный вариант в критериях
+  .page & {
+    &::before {
+      @include center;
+      content: "";
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background-color: $c-light;
+      border: 2px solid $c-light;
+      z-index: -1;
+      transition: all 0.35s cubic-bezier(0.5, 1.3, 0.5, 1.3);
+    }
   }
 
   svg {
@@ -58,6 +60,13 @@
     height: 2.2rem;
   }
 
+  .page--loaded & {
+    &::before {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   &:hover,
   .social-block--active & {
     color: $c-purple;
@@ -65,6 +74,7 @@
     &::before {
       width: 112.5%;
       height: 112.5%;
+      transition: all 0.35s ease;
     }
   }
 

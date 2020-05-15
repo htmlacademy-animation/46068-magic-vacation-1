@@ -1,0 +1,3 @@
+@function delay($base, $multiplier) {
+  @return $base * $multiplier;
+}
