@@ -1,0 +1,20 @@
+.bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $c-dark;
+
+  &.active {
+    z-index: 1;
+    animation: 0.8s changeBgOnScroll 0s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .screen--prizes.active ~ &,
+  .screen--rules.active ~ &,
+  .screen--game.active ~ &,
+  .screen--result.active ~ & {
+    transform: scaleY(1);
+  }
+}
