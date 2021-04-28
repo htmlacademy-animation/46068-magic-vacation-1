@@ -5,6 +5,7 @@
   width: 100vw;
   height: 100vh;
   background-color: $c-dark;
+  z-index: -1;
 
   &.active {
     z-index: 1;
@@ -15,6 +16,7 @@
   .screen--rules.active ~ &,
   .screen--game.active ~ &,
   .screen--result.active ~ & {
+    z-index: initial;
     transform: scaleY(1);
   }
 }
