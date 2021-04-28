@@ -3375,7 +3375,8 @@ img {
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #5f458c; }
+  background-color: #5f458c;
+  z-index: -1; }
   .bg.active {
     z-index: 1;
     animation: 0.8s changeBgOnScroll 0s cubic-bezier(0.16, 1, 0.3, 1); }
@@ -3383,6 +3384,7 @@ img {
   .screen--rules.active ~ .bg,
   .screen--game.active ~ .bg,
   .screen--result.active ~ .bg {
+    z-index: initial;
     transform: scaleY(1); }
 
 /* External styling override */
