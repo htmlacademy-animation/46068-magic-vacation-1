@@ -5,6 +5,10 @@
   padding: 14.6rem 0 7.7rem;
   width: 100%;
 
+  .screen--prizes.active & {
+    animation: 0.35s fadeIn 0.15s ease backwards;
+  }
+
   @media (min-width: $stop-scaling) {
     padding: 146px 0 65px;
   }
